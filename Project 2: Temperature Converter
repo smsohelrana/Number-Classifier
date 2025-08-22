@@ -1,0 +1,31 @@
+PHP script for Temperature Convert :
+
+<?php 
+
+// c/5 = ((F-32) /9 )5;
+//Celsius to Fahrenheit: (celsius * 9/5) + 32
+//Fahrenheit to Celsius: (fahrenheit - 32) * 5/9
+
+const factor = 9/5;
+const offset = 32;
+
+echo "Enter Your Temperature : ";
+$temperature = (float)readline();
+
+echo "Convert to (F: farenheit, C: Celcius): ";
+$choice =readline();
+
+switch(strtolower ($choice)){
+    case "f": 
+        $result = $temperature *factor + offset;
+        echo "Temperature in Farenheit : $result";
+        break;
+
+        case "c": 
+        $result = ($temperature - offset)/factor;
+        echo "temperature in Celcius : $result";
+        break;
+        default :
+        echo "Invalid choice" ;
+        break;
+}
