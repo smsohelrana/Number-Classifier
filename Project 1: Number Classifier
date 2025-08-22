@@ -1,1 +1,19 @@
-Project 1: Number Classifier
+Number Classifier PHP Code:
+
+<?php 
+
+echo "Enter Number: ";
+
+$number = (int)readline();
+
+if($number > 0 && ($number %2 ) == 0){
+    echo "The number $number is Positive and Even.";
+}elseif($number > 0 && ($number % 2) != 0){
+    echo "The number $number is Positive and Odd.";
+}elseif($number < 0 && ($number % 2) == 0){
+    echo "The number $number is Negetive and Even.";
+}elseif($number < 0 && ($number % 2) != 0){
+    echo "The number $number is Negetive and Odd.";
+}else{
+    echo "The number $number is Zero.";
+}
